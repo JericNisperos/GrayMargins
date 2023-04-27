@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+/* :root {
+  --foreground-rgb: 150, 150, 150;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+html
+body {
+  @apply bg-stone-200;
+  font-family: 'Proxima Nova', sans-serif;
+
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+table.table-default {
+  @apply w-10/12 max-w-7xl text-center mt-12 rounded-lg bg-blue-500;
+}
+
+table.table-default tr td {
+  /* @apply ; */
+}
+
+.btn-default {
+  @apply  p-2 items-center rounded-md mx-1;
+}
