@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Fa500Px, FaEdit, FaPlus, FaTrash } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 function Products() {
   const { data: session } = useSession();
   const [products, setProducts] = useState([]);
@@ -29,7 +29,10 @@ function Products() {
             <FaPlus /> Add new Product
           </Link>
         </div>
-        <div className="items-center flex mx-auto justify-center rounded-lg ">
+        <motion.div
+        initial={{y: 10, opacity: 0}}
+        animate={{y: 0, opacity: 1}}
+        className="items-center flex mx-auto justify-center rounded-lg ">
           <table className="table-default shadow-lg table-fixed text-left">
             <thead>
               <tr className="mx-8 text-white text-xl">
@@ -59,7 +62,7 @@ function Products() {
               ))}
             </tbody>
           </table>
-        </div>
+        </motion.div>
       </Layout>
     </div>
   );

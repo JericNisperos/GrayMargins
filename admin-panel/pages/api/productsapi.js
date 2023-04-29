@@ -29,6 +29,12 @@ async function ProductList(req, res) {
     const UpdateDoc = await ProductModel.updateOne({ _id }, { $set: { title, description, price } });
     res.json(true);
   }
+
+  if (method === "DELETE") {
+    if (req.query?.id) {
+      res.json(await ProductModel.deleteOne({ _id: req.query.id }));
+    }
+  }
 }
 
 export default ProductList;
